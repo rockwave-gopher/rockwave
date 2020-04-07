@@ -1,16 +1,16 @@
 package mytest
 
-func hello() string {
-	words:=[]string{"hello", "func", "in", "package", "hello"}
-	wl :=len(words)
-	sentence :=""
-	for key, word := range words {
-		sentence += word
-		if key < wl-1 {
-			sentence += " "
-		} else {
-			sentence += "."
-		}
+func Add(x int, y int) (z int) {
+	z = x + y
+	return z
+}
+
+type ForTest struct {
+	num int
+}
+
+func (t *ForTest) Loops() {
+	for i := 0; i < 10000; i++ {
+		t.num++
 	}
-	return sentence
 }
